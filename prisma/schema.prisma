@@ -1,0 +1,85 @@
+generator client { 
+  provider = "prisma-client" 
+  output = "../app/generated/prisma"
+  } 
+datasource db { 
+  provider = "postgresql" 
+  url = env("DATABASE_URL") 
+  }
+
+
+
+// =======================================
+// USER MODEL (Custom + NextAuth Compatible)
+// =======================================
+model User {
+  id             String    @id @default(cuid())
+  name           String?
+  email          String    @unique
+  password       String?
+  token          String?          // Your custom JWT
+  appxAuthToken  String?          // External API token
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  // Relations
+  sessions       Session[]
+  accounts       Account[]
+  results        Results[]        // 👈 One user → many results
+}
+
+// =======================================
+// ACCOUNT MODEL (For NextAuth OAuth Support)
+// =======================================
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+// =======================================
+// SESSION MODEL (For NextAuth Session Storage)
+// =======================================
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// =======================================
+// VERIFICATION TOKEN MODEL (for email sign-in etc.)
+// =======================================
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// =======================================
+// RESULTS MODEL (Each belongs to one user)
+// =======================================
+model Results {
+  id          String   @id @default(cuid())
+  userId      String
+  videoUrl    String   // cloudinary
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
