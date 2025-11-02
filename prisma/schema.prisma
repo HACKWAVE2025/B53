@@ -26,6 +26,7 @@ model User {
   sessions       Session[]
   accounts       Account[]
   results        Results[]        // 👈 One user → many results
+  testSuites     TestSuite[]      // 👈 One user → many test suites
 }
 
 // =======================================
@@ -82,4 +83,25 @@ model Results {
   videoUrl    String   // cloudinary
 
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+// =======================================
+// TEST SUITE MODEL (Each belongs to one user)
+// =======================================
+model TestSuite {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  description String?
+  websiteUrl  String
+  videoUrl    String?  // cloudinary video URL
+  markdownReport String? @db.Text // test results in markdown
+  status      String   @default("pending") // pending, passed, failed
+  testCount   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
 }

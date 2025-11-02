@@ -1,0 +1,181 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - region "Notifications (F8)":
+      - list
+    - region "Notifications alt+T"
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - img "Event Hero" [ref=e6]
+        - generic [ref=e8]:
+          - heading "Discover Amazing Events" [level=1] [ref=e9]
+          - paragraph [ref=e10]: Find and register for events that match your interests
+          - generic [ref=e12]:
+            - img [ref=e13]
+            - textbox "Search events..." [ref=e16]
+            - button "Search" [ref=e17] [cursor=pointer]
+      - generic [ref=e20]:
+        - generic [ref=e21] [cursor=pointer]: All Events
+        - generic [ref=e22] [cursor=pointer]: Technology
+        - generic [ref=e23] [cursor=pointer]: Music
+        - generic [ref=e24] [cursor=pointer]: Business
+        - generic [ref=e25] [cursor=pointer]: Workshop
+        - generic [ref=e26] [cursor=pointer]: Sports
+        - generic [ref=e27] [cursor=pointer]: Food
+      - generic [ref=e28]:
+        - generic [ref=e30]:
+          - heading "All Events" [level=2] [ref=e31]
+          - paragraph [ref=e32]: 6 events available
+        - generic [ref=e33]:
+          - generic [ref=e34] [cursor=pointer]:
+            - generic [ref=e35]:
+              - img "Tech Innovation Summit 2024" [ref=e36]
+              - generic [ref=e38]: Technology
+              - paragraph [ref=e40]: $299
+            - generic [ref=e41]:
+              - generic [ref=e42]:
+                - heading "Tech Innovation Summit 2024" [level=3] [ref=e43]
+                - paragraph [ref=e44]: Join industry leaders for the biggest tech conference of the year.
+              - generic [ref=e45]:
+                - generic [ref=e46]:
+                  - img [ref=e47]
+                  - generic [ref=e49]: Dec 15, 2024 • 09:00 AM - 06:00 PM
+                - generic [ref=e50]:
+                  - img [ref=e51]
+                  - generic [ref=e54]: Convention Center, San Francisco, CA
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e61]: 245 attending • 255 spots left
+              - generic [ref=e63]:
+                - generic [ref=e64]: 49% filled
+                - generic [ref=e65]: 245/500
+              - button "View Details" [ref=e68]
+          - generic [ref=e69] [cursor=pointer]:
+            - generic [ref=e70]:
+              - img "Summer Music Festival" [ref=e71]
+              - generic [ref=e73]: Music
+              - paragraph [ref=e75]: $149
+            - generic [ref=e76]:
+              - generic [ref=e77]:
+                - heading "Summer Music Festival" [level=3] [ref=e78]
+                - paragraph [ref=e79]: Experience three days of incredible live music from top artists.
+              - generic [ref=e80]:
+                - generic [ref=e81]:
+                  - img [ref=e82]
+                  - generic [ref=e84]: Jul 20, 2024 • 02:00 PM - 11:00 PM
+                - generic [ref=e85]:
+                  - img [ref=e86]
+                  - generic [ref=e89]: Riverside Park, Austin, TX
+                - generic [ref=e90]:
+                  - img [ref=e91]
+                  - generic [ref=e96]: 1250 attending • 750 spots left
+              - generic [ref=e98]:
+                - generic [ref=e99]: 63% filled
+                - generic [ref=e100]: 1250/2000
+              - button "View Details" [ref=e103]
+          - generic [ref=e104] [cursor=pointer]:
+            - generic [ref=e105]:
+              - img "Business Networking Night" [ref=e106]
+              - generic [ref=e108]: Business
+              - paragraph [ref=e110]: $75
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - heading "Business Networking Night" [level=3] [ref=e113]
+                - paragraph [ref=e114]: Connect with entrepreneurs and business leaders in your industry.
+              - generic [ref=e115]:
+                - generic [ref=e116]:
+                  - img [ref=e117]
+                  - generic [ref=e119]: Jun 10, 2024 • 06:00 PM - 09:00 PM
+                - generic [ref=e120]:
+                  - img [ref=e121]
+                  - generic [ref=e124]: The Grand Hotel, New York, NY
+                - generic [ref=e125]:
+                  - img [ref=e126]
+                  - generic [ref=e131]: 180 attending • 20 spots left
+              - generic [ref=e133]:
+                - generic [ref=e134]: 90% filled
+                - generic [ref=e135]: 180/200
+              - button "View Details" [ref=e138]
+          - generic [ref=e139] [cursor=pointer]:
+            - generic [ref=e140]:
+              - img "Creative Design Workshop" [ref=e141]
+              - generic [ref=e143]: Workshop
+              - paragraph [ref=e145]: $199
+            - generic [ref=e146]:
+              - generic [ref=e147]:
+                - heading "Creative Design Workshop" [level=3] [ref=e148]
+                - paragraph [ref=e149]: Learn advanced design techniques from award-winning designers.
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - img [ref=e152]
+                  - generic [ref=e154]: Aug 5, 2024 • 10:00 AM - 04:00 PM
+                - generic [ref=e155]:
+                  - img [ref=e156]
+                  - generic [ref=e159]: Design Studio, Seattle, WA
+                - generic [ref=e160]:
+                  - img [ref=e161]
+                  - generic [ref=e166]: 45 attending • 5 spots left
+              - generic [ref=e168]:
+                - generic [ref=e169]: 90% filled
+                - generic [ref=e170]: 45/50
+              - button "View Details" [ref=e173]
+          - generic [ref=e174] [cursor=pointer]:
+            - generic [ref=e175]:
+              - img "City Marathon 2024" [ref=e176]
+              - generic [ref=e178]: Sports
+              - paragraph [ref=e180]: $50
+            - generic [ref=e181]:
+              - generic [ref=e182]:
+                - heading "City Marathon 2024" [level=3] [ref=e183]
+                - paragraph [ref=e184]: Challenge yourself in the annual city-wide marathon event.
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - img [ref=e187]
+                  - generic [ref=e189]: Sep 15, 2024 • 06:00 AM - 12:00 PM
+                - generic [ref=e190]:
+                  - img [ref=e191]
+                  - generic [ref=e194]: City Center, Chicago, IL
+                - generic [ref=e195]:
+                  - img [ref=e196]
+                  - generic [ref=e201]: 3500 attending • 1500 spots left
+              - generic [ref=e203]:
+                - generic [ref=e204]: 70% filled
+                - generic [ref=e205]: 3500/5000
+              - button "View Details" [ref=e208]
+          - generic [ref=e209] [cursor=pointer]:
+            - generic [ref=e210]:
+              - img "International Food Festival" [ref=e211]
+              - generic [ref=e213]: Food
+              - paragraph [ref=e215]: $25
+            - generic [ref=e216]:
+              - generic [ref=e217]:
+                - heading "International Food Festival" [level=3] [ref=e218]
+                - paragraph [ref=e219]: Taste cuisines from around the world at this culinary celebration.
+              - generic [ref=e220]:
+                - generic [ref=e221]:
+                  - img [ref=e222]
+                  - generic [ref=e224]: Oct 12, 2024 • 11:00 AM - 08:00 PM
+                - generic [ref=e225]:
+                  - img [ref=e226]
+                  - generic [ref=e229]: Waterfront Plaza, Miami, FL
+                - generic [ref=e230]:
+                  - img [ref=e231]
+                  - generic [ref=e236]: 2800 attending • 1200 spots left
+              - generic [ref=e238]:
+                - generic [ref=e239]: 70% filled
+                - generic [ref=e240]: 2800/4000
+              - button "View Details" [ref=e243]
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - generic [ref=e248]: 6+
+          - generic [ref=e249]: Active Events
+        - generic [ref=e250]:
+          - generic [ref=e251]: 8020+
+          - generic [ref=e252]: Happy Attendees
+        - generic [ref=e253]:
+          - generic [ref=e254]: "6"
+          - generic [ref=e255]: Event Categories
+  - link "Edit with ×" [ref=e256] [cursor=pointer]:
+    - /url: https://lovable.dev/projects/cd0fe522-b25f-4265-a5e6-c5446d036526?utm_source=lovable-badge
+    - generic [ref=e257]: Edit with
+    - img [ref=e258]
+    - button "×" [ref=e275]

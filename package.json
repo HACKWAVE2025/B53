@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.40",
     "@ai-sdk/google": "^2.0.26",
     "@mastra/core": "^0.23.3",
     "@mastra/mcp": "^0.14.1",
@@ -29,6 +30,7 @@
     "prisma": "^6.18.0",
     "react": "^19.2.0",
     "react-dom": "19.2.0",
+    "react-markdown": "^10.1.0",
     "tailwind-merge": "^3.3.1",
     "zod": "^4.1.12"
   },

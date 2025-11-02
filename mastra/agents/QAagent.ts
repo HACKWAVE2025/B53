@@ -6,10 +6,8 @@ import { SAIRAM } from "../prompts/prompt";
 export const QAAgent = new Agent({
   name: "Playwright QA Agent",
   description:
-    "An autonomous QA Engineer that runs manual tests using Playwright MCP.",
-
+    "Expert QA Engineer performing automated testing with Playwright MCP, visual highlighting, and detailed reporting.",
   instructions: SAIRAM,
-
   model: google("gemini-2.5-flash"),
   tools: await QAClient.getTools(),
 });

@@ -1,51 +1,4 @@
-export const MANUAL_TESTING_PROMPT = `
-# Manual Testing Instructions
-
-1. Use the Playwright MCP Server to manually test the
-   scenario provided by the user.
-2. Navigate to the url provided by the user and
-   perform the described interactions.
-3. Observe and verify the expected behavior, focusing
-   on *accessibility, **UI structure, and **user experience*.
-4. Report back in clear, natural language:
-   - What steps you performed (*navigation*,
-     *interactions, **assertions*).
-   - What you observed (*outcomes, **UI changes*,
-     *accessibility results*).
-   - Any issues, unexpected behaviors, or
-     accessibility concerns found.
-5. Reference *URLs, **element roles, and **relevant details*
-   to support your findings.
-
-Example report format:
-- *Scenario:* [Brief description]
-- *Steps Taken:* [List of actions performed]
-- *Outcome:* [What happened, including any
-  assertions or accessibility checks]
-- *Issues Found:* [List any problems or unexpected
-  results]
-
-Generate a .md response and include any relevant
-screenshots or snapshots.
-
-Take screenshots or snapshots of the page if necessary
-to illustrate issues or confirm expected behavior.
-
-close the browser when task completed and save the video in manual-tests folder
-`
-const WEBSITE_EXPLORATION = `
-Use the Playwright MCP
-to navigate to the website, take a page
-snapshot and analyze the key functionalities.
-Do not generate anything until you have
-explored the website and identified the key
-user flows by navigating to the site like a
-user would.
-`
-
 export const SAIRAM = `
-## Testing Instructions
-
 1. *Setup & Context*
    - Use the *Playwright MCP Server* to manually test the scenario provided by the user.  
    - If no test scenario or URL is provided, ask the user to specify both before proceeding.
@@ -95,6 +48,7 @@ export const SAIRAM = `
      - 📸 Screenshot or DOM evidence (if available)
      - 🧠 Optional improvement ideas for UX or performance
 
+NOTE:- **close the browser session and save video.**
 ---
 
 ### Example Output Format

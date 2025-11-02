@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Mail } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Badge } from '@/components/ui/badge';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, Mail } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
 
 interface FAQItemProps {
   question: string;
@@ -22,12 +22,12 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
       transition={{
         duration: 0.3,
         delay: index * 0.15,
-        ease: 'easeOut',
+        ease: "easeOut",
       }}
       className={cn(
-        'group border-border/60 rounded-lg border',
-        'transition-all duration-200 ease-in-out',
-        isOpen ? 'bg-card/30 shadow-sm' : 'hover:bg-card/50',
+        "group border-border/60 rounded-lg border",
+        "transition-all duration-200 ease-in-out",
+        isOpen ? "bg-card/30 shadow-sm" : "hover:bg-card/50"
       )}
     >
       <button
@@ -37,9 +37,9 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
       >
         <h3
           className={cn(
-            'text-left text-base font-medium transition-colors duration-200',
-            'text-foreground/80',
-            isOpen && 'text-foreground',
+            "text-left text-base font-medium transition-colors duration-200",
+            "text-foreground/80",
+            isOpen && "text-foreground"
           )}
         >
           {question}
@@ -51,12 +51,12 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
           }}
           transition={{
             duration: 0.3,
-            ease: 'easeInOut',
+            ease: "easeInOut",
           }}
           className={cn(
-            'shrink-0 rounded-full p-0.5',
-            'transition-colors duration-200',
-            isOpen ? 'text-primary' : 'text-muted-foreground',
+            "shrink-0 rounded-full p-0.5",
+            "transition-colors duration-200",
+            isOpen ? "text-primary" : "text-muted-foreground"
           )}
         >
           <ChevronDown className="h-4 w-4" />
@@ -67,7 +67,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{
-              height: 'auto',
+              height: "auto",
               opacity: 1,
               transition: {
                 height: {
@@ -86,7 +86,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
               transition: {
                 height: {
                   duration: 0.3,
-                  ease: 'easeInOut',
+                  ease: "easeInOut",
                 },
                 opacity: {
                   duration: 0.25,
@@ -101,7 +101,7 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
                 exit={{ y: -8, opacity: 0 }}
                 transition={{
                   duration: 0.3,
-                  ease: 'easeOut',
+                  ease: "easeOut",
                 }}
                 className="text-muted-foreground text-sm leading-relaxed"
               >
@@ -116,31 +116,31 @@ function FAQItem({ question, answer, index }: FAQItemProps) {
 }
 
 export default function Faq3() {
-  const faqs: Omit<FAQItemProps, 'index'>[] = [
+  const faqs: Omit<FAQItemProps, "index">[] = [
     {
-      question: 'What is the onboarding process?',
+      question: "What is the onboarding process?",
       answer:
         "Onboarding is extremely simple on Qubo — since we do not require access to your codebase, all you need to provide is a public URL to start writing your first test. We onboard customers in two steps: first, hop on a call with us to help us understand your requirements, and we'll onboard you on the next call and get you set up in no time!",
     },
     {
-      question: 'How does the Quba Agent work?',
+      question: "How does the Quba Agent work?",
       answer:
-        'The Qubo Agent is a vision-first, multi-modal agent. This means that your tests are not reliant on CSS selectors, unlike tests written in web-automation frameworks like Playwright or Selenium. This allows your tests to be more reliable, and reduces the chances of false-positives — so you can focus on shipping faster!',
+        "The Qubo Agent is a vision-first, multi-modal agent. This means that your tests are not reliant on CSS selectors, unlike tests written in web-automation frameworks like Playwright or Selenium. This allows your tests to be more reliable, and reduces the chances of false-positives — so you can focus on shipping faster!",
     },
     {
-      question: 'What kind of flows do you support?',
+      question: "What kind of flows do you support?",
       answer:
         "We can support any action that happens within the Browser window—no matter how complex your use case is. The Qubo Agent interacts with the browser just like any human does!",
     },
     {
-      question: 'Do I need to know how to code to use Qubo?',
+      question: "Do I need to know how to code to use Qubo?",
       answer:
-        'No! Qubo is a no-code test platform — this means that all tests can be written in Natural Language. Whether you are a PM, CTO, Engineer or QA — anyone can write tests on Qubo.',
+        "No! Qubo is a no-code test platform — this means that all tests can be written in Natural Language. Whether you are a PM, CTO, Engineer or QA — anyone can write tests on Qubo.",
     },
     {
-      question: 'What kind of support do customers get?',
+      question: "What kind of support do customers get?",
       answer:
-        'We are hands-on with all of our customers. We will have a dedicated slack connect channels, unlimited test creation support as well as test management support for some of our plans.',
+        "We are hands-on with all of our customers. We will have a dedicated slack connect channels, unlimited test creation support as well as test management support for some of our plans.",
     },
   ];
 
@@ -164,9 +164,9 @@ export default function Faq3() {
             FAQs
           </Badge>
 
-          <h2 className="from-primary to-rose-400 mb-3 bg-gradient-to-r bg-clip-text text-3xl font-bold text-transparent">
-  Frequently Asked Questions
-</h2>
+          <h2 className="from-primary to-rose-400 mb-3 bg-linear-to-r bg-clip-text text-3xl font-bold text-transparent">
+            Frequently Asked Questions
+          </h2>
 
           <p className="text-muted-foreground text-sm">
             Everything you need to know about MVPBlocks
@@ -183,7 +183,7 @@ export default function Faq3() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className={cn('mx-auto mt-12 max-w-md rounded-lg p-6 text-center')}
+          className={cn("mx-auto mt-12 max-w-md rounded-lg p-6 text-center")}
         >
           <div className="bg-primary/10 text-primary mb-4 inline-flex items-center justify-center rounded-full p-2">
             <Mail className="h-4 w-4" />
@@ -197,11 +197,11 @@ export default function Faq3() {
           <button
             type="button"
             className={cn(
-              'rounded-md px-4 py-2 text-sm',
-              'bg-primary text-primary-foreground',
-              'hover:bg-primary/90',
-              'transition-colors duration-200',
-              'font-medium',
+              "rounded-md px-4 py-2 text-sm",
+              "bg-primary text-primary-foreground",
+              "hover:bg-primary/90",
+              "transition-colors duration-200",
+              "font-medium"
             )}
           >
             Contact Support
